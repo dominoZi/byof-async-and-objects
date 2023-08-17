@@ -1,0 +1,47 @@
+.ExampleButton-root {
+  margin: 16px 0;
+  padding: 12px 24px;
+  border: 1px solid #999;
+}
+
+.ExampleButton-root.disabled {
+  pointer-events: none;
+  cursor: none;
+  filter: grayscale(1);
+}
+
+.ExampleButton-root.gray {
+  border: 1px solid #999;
+  color: black;
+}
+
+.ExampleButton-root.gray:hover {
+  background-color: #eee;
+}
+
+.ExampleButton-root.red {
+  border: 1px solid #b91c1c;
+  background-color: #f87171;
+}
+
+.ExampleButton-root.red:hover {
+  background-color: #fecaca;
+}
+
+.ExampleButton-root.green {
+  border: 1px solid #15803d;
+  background-color: #22c55e;
+}
+
+.ExampleButton-root.green:hover {
+  background-color: #bbf7d0;
+}
+
+.ExampleButton-root.yellow {
+  border: 1px solid #a16207;
+  background-color: #facc15;
+}
+
+.ExampleButton-root.yellow:hover {
+  background-color: #fef08a;
+}

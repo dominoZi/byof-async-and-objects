@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 24px;
+  @apply mb-4;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+li {
+  @apply mb-2;
+}
+
+@layer components {
+  figcaption {
+    @apply text-slate-400;
+    @apply text-sm;
+  }
+
+  a.source {
+    @apply hover:text-blue-800;
+    @apply visited:text-blue-400;
+  }
+}
+
+.horizontal-tb {
+  writing-mode: horizontal-tb;
+}
+
+.vertical-rl {
+  writing-mode: vertical-rl;
+}
+
+.vertical-lr {
+  writing-mode: vertical-lr;
+}
+
+.mbs-5 {
+  margin-block-start: 1.25rem;
+}
+.mbe-5 {
+  margin-block-end: 1.25rem;
+}
+
+.toggle-checkbox-wrapper {
+}
+
+.toggle-checkbox-wrapper .toggle-checkbox {
+  display: none;
+}
+
+.slider {
+  position: relative;
+}
+
+/* ellipsis */
+.slider::before {
+  background: lightblue;
+  border-radius: 34px;
+  bottom: 0;
+  content: "";
+  height: 24px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  width: 40px;
+}
+
+/* circle */
+.slider::after {
+  background: navy;
+  border-radius: 50%;
+  bottom: 0;
+  content: "";
+  height: 16px;
+  left: 4px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  transition: 0.4s;
+  width: 16px;
+}
+
+.toggle-switch {
+  margin-left: 50px;
+}
+
+.toggle-switch.opt1 {
+  color: navy;
+}
+
+.toggle-switch.opt2 {
+  color: brown;
+  display: none;
+}
+
+.toggle-checkbox:checked + .slider::before {
+  background-color: lightsalmon;
+}
+
+.toggle-checkbox:checked + .slider::after {
+  background-color: maroon;
+  transform: translateX(16px);
+}
+
+.toggle-checkbox:checked ~ .slider > .toggle-switch.opt1 {
+  display: none;
+}
+
+.toggle-checkbox:checked ~ .slider > .toggle-switch.opt2 {
+  display: inline-block;
+}
